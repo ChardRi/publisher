@@ -13,9 +13,6 @@ KISSY.add(function (S, Node, Base, XTemplate, UA, IO, Storage) {
         node : {
             value : null
         },
-        textareaNode : {
-        	value : 'J_Textarea'
-        },
         maxLen : {
             value : 1500
         },
@@ -27,6 +24,12 @@ KISSY.add(function (S, Node, Base, XTemplate, UA, IO, Storage) {
         },
         timeInterval : {
             value : 30
+        },
+        url : {
+            value: null
+        },
+        callback : {
+            value : null
         }
     };
 
@@ -74,10 +77,10 @@ KISSY.add(function (S, Node, Base, XTemplate, UA, IO, Storage) {
             var render = new XTemplate(tpl).render(data);
             $(render).appendTo(self.node);
 
-            self.textareaNode = $('#'+self.get('textareaNode'));
-            self.textareaWrap = $('.publisher-textarea');
-            self.submitButton = $('.publisher-submit');
-            self.fontCountNode = $('.font-count');
+            self.textareaNode = self.node.one('.publisher-content');
+            self.textareaWrap = self.node.one('.publisher-textarea');
+            self.submitButton = self.node.one('.publisher-submit');
+            self.fontCountNode = self.node.one('.font-count');
         },
         bindUI : function(){
             var self = this;
@@ -192,7 +195,7 @@ KISSY.add(function (S, Node, Base, XTemplate, UA, IO, Storage) {
         },
         _error : function(){
             var self = this;
-            var arrayNode = $('.arrow-bg');
+            var arrayNode = self.node.one('.arrow-bg');
             if(UA.ie < 10){
                 self.textareaNode.animate({background:'#F5A9A9'}, {duration: 0.4}).animate({background:'#FFF'}, {duration: 0.2}).animate({background:'#F5A9A9'}, {duration: 0.4}).animate({background:'#FFF'}, {duration: 0.2});
 
