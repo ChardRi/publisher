@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <style>
+        body{
+            font-size: 13px;
+            font-family: Tahoma, Microsoft YaHei;
+        }
+        #J_test1,#J_test2,#J_test3{
+            margin:0 20px;
+        }
+    </style>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.1/seed-min.js" data-config="{combine:true}"></script>
+</head>
+<body>
+    <div id="J_Test1">        
+    </div>
+    <div id="J_Test2">
+    </div>
+    <div id="J_Test3">
+    </div>
+    <script type="text/javascript">
+        KISSY.config({
+            combine:true,
+            packages:{
+                publisher:{
+                    base:'./',
+                    debug:true,
+                    combine:false
+                }
+            }
+        })
+
+        KISSY.use('publisher/index', function(S, Publisher){
+            var publisher1 = new Publisher({
+                node : '#J_Test1'
+            });
+
+            var publisher2 = new Publisher({
+                node : '#J_Test2',
+                maxLen : 300,
+                placeholderText : '只是个测试2',
+                url : '/publisher/test.js',
+                callback : function(r){
+                    alert('success')
+                }
+            });
+
+            var publisher3 = new Publisher({
+                node : '#J_Test3',
+                maxLen : 400,
+                placeholderText : '只是个测试3'
+            });
+
+            publisher3.on('submit',function(){
+                alert('手动配置提交的逻辑')
+            })
+
+        })
+    </script>
+</body>
+</html>
