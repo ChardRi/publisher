@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <style>
+        body{
+            font-size: 13px;
+            font-family: Tahoma, Microsoft YaHei;
+        }
+        #J_test{
+            margin:0 20px;
+        }
+    </style>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.1/seed-min.js" data-config="{combine:true}"></script>
+</head>
+<body>
+    <div id="J_Test">
+        
+    </div>
+    <script type="text/javascript">
+        KISSY.config({
+            combine:true,
+            packages:{
+                publisher:{
+                    base:'./',
+                    debug:true,
+                    combine:false
+                }
+            }
+        })
+
+        KISSY.use('publisher/index', function(S, Publisher){
+            var publisher = new Publisher({
+                node : '#J_Test',
+                maxLen : 300,
+                placeholderText : '只是个测试',
+                url : '/publisher/test.js',
+                callback : function(r){
+                    alert('success')
+                }
+            });
+        })
+    </script>
+</body>
+</html>

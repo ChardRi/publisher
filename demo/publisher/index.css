@@ -1,0 +1,207 @@
+.publisher-status{
+    width:540px;
+    overflow: hidden;
+    *zoom:1;
+}
+.publisher-status .publisher-tags{
+    float: left;
+    margin: 8px 0 0 10px;
+}
+.publisher-status .publisher-tag{
+    float: left;
+    margin: 0 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.publisher-status .publisher-fontcount{
+    float: right;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: Constantia, Georgia;
+}
+.publisher-status .publisher-fontcount em{
+    font-size: 22px;
+}
+.publisher-textarea{
+    width: 540px;
+    position: relative;
+}
+.publisher-textarea .publisher-content{
+    margin-top: 8px;
+    margin-top: 7px\9;
+    *margin-top: 6px;
+    padding: 10px;
+    width: 520px;
+    height: 90px;
+    font-size: 13px;
+    font-family: Microsoft YaHei;
+    word-wrap: break-word;
+    line-height: 18px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    resize: none;
+    outline: none;
+    border:1px solid #CCC;
+    border-radius: 4px;
+}
+@-webkit-keyframes contentError {
+    0% {
+        background: #F5A9A9;
+    }
+    40% {
+        background: #fff;
+    }
+    60% {
+        background: #F5A9A9;
+    }
+    100% {
+        background: #fff;
+    }
+}
+@-moz-keyframes contentError {
+    0% {
+        background: #F5A9A9;
+    }
+    40% {
+        background: #fff;
+    }
+    60% {
+        background: #F5A9A9;
+    }
+    100% {
+        background: #fff;
+    }
+}
+@-o-keyframes contentError {
+    0% {
+        background: #F5A9A9;
+    }
+    40% {
+        background: #fff;
+    }
+    60% {
+        background: #F5A9A9;
+    }
+    100% {
+        background: #fff;
+    }
+}
+@keyframes contentError {
+    0% {
+        background: #F5A9A9;
+    }
+    40% {
+        background: #fff;
+    }
+    60% {
+        background: #F5A9A9;
+    }
+    100% {
+        background: #fff;
+    }
+}
+.publisher-textarea .content-error{
+    -webkit-animation:contentError 1s linear;
+       -moz-animation:contentError 1s linear;
+         -o-animation:contentError 1s linear;
+            animation:contentError 1s linear;
+}
+@-webkit-keyframes tagError {
+    0% {
+        color: #F5A9A9;
+    }
+    40% {
+        color: #fff;
+    }
+    60% {
+        color: #F5A9A9;
+    }
+    100% {
+        color: #fff;
+    }
+}
+@-moz-keyframes tagError {
+    0% {
+        color: #F5A9A9;
+    }
+    40% {
+        color: #fff;
+    }
+    60% {
+        color: #F5A9A9;
+    }
+    100% {
+        color: #fff;
+    }
+}
+@-o-keyframes tagError {
+    0% {
+        color: #F5A9A9;
+    }
+    40% {
+        color: #fff;
+    }
+    60% {
+        color: #F5A9A9;
+    }
+    100% {
+        color: #fff;
+    }
+}
+@keyframes tagError {
+    0% {
+        color: #F5A9A9;
+    }
+    40% {
+        color: #fff;
+    }
+    60% {
+        color: #F5A9A9;
+    }
+    100% {
+        color: #fff;
+    }
+}
+.publisher-textarea .tag-error{
+    -webkit-animation:tagError 1s linear;
+       -moz-animation:tagError 1s linear;
+         -o-animation:tagError 1s linear;
+            animation:tagError 1s linear;
+}
+.tag-arrow{
+    position: absolute;
+    left: 25px;
+    z-index: 0;
+    cursor: default;
+    overflow: hidden;
+    height: 9px;
+}
+.tag-arrow .arrow{
+    font-family: "SimSun";
+    overflow: hidden;
+    font-size: 15px;
+    display: block;
+    height: 15px;
+}
+.arrow-line{
+    color: #CCC;
+}
+.arrow-bg{
+    color: #FFF;
+    margin: -13px 0 0;
+}
+.publisher-buttons{
+    margin:10px 0 0;
+    width:540px;
+    overflow: hidden;
+    *zoom: 1;
+}
+.publisher-submit{
+    float: right;
+    padding: 5px 20px;
+    color: #999;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: 0;
+}
