@@ -8,6 +8,9 @@
             font-size: 13px;
             font-family: Tahoma, Microsoft YaHei;
         }
+        p{
+            margin:20px 10px 10px;
+        }
         #J_test1,#J_test2,#J_test3{
             margin:0 20px;
         }
@@ -15,10 +18,13 @@
     <script src="http://g.tbcdn.cn/kissy/k/1.4.1/seed-min.js" data-config="{combine:true}"></script>
 </head>
 <body>
+    <p>Test1: 快速使用</p>
     <div id="J_Test1">        
     </div>
+    <p>Test2: 配置发布器异步提交的链接和回调函数</p>
     <div id="J_Test2">
     </div>
+    <p>Test3: 手动设定发布器提交的逻辑</p>
     <div id="J_Test3">
     </div>
     <script type="text/javascript">
@@ -35,7 +41,8 @@
 
         KISSY.use('publisher/index', function(S, Publisher){
             var publisher1 = new Publisher({
-                node : '#J_Test1'
+                node : '#J_Test1',
+                url : '/publisher/test.js',
             });
 
             var publisher2 = new Publisher({

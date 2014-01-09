@@ -108,7 +108,7 @@ KISSY.add(function (S, Node, Base, XTemplate, UA, IO, Storage) {
             var maxLen = self.get('maxLen');
             self.submitStatus = false;
 
-            //考虑全角半角
+            //考虑中英文字符
             self.textareaNode.on('valuechange',function(e){
                 var length = 0,
                     prevVal = e.prevVal,
@@ -145,8 +145,10 @@ KISSY.add(function (S, Node, Base, XTemplate, UA, IO, Storage) {
 
                         var newVal = self.textareaNode.val(),
                             newTime = new Date().getTime(),
-                            lastVal = Storage.getItem('lastPubVal'),
-                            lastTime = Storage.getItem('lastPubTime');
+                            lastVal = Storage.getItem(self.get('node')+'lastPubVal'),
+                            lastTime = Storage.getItem(self.get('node')+'lastPubTime');
+
+                        //使用本地存储判断是否重复提交
                         if( lastVal === '' || ( /\d/.test(lastTime) && (newTime - lastTime) > timeInterval*1000 ) || lastVal != newVal ){
 
                             var ajax = IO({
@@ -159,8 +161,8 @@ KISSY.add(function (S, Node, Base, XTemplate, UA, IO, Storage) {
                             })
                         
                             ajax.then(function(r){
-                                Storage.setItem('lastPubTime', newTime);
-                                Storage.setItem('lastPubVal', newVal);
+                                Storage.setItem(self.get('node')+'lastPubTime', newTime);
+                                Storage.setItem(self.get('node')+'lastPubVal', newVal);
                                 return r
                             }).then(function(r){
                                 self.get('callback')(r[0])

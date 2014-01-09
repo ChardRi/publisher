@@ -18,6 +18,7 @@
     font-weight: 700;
     font-size: 15px;
     font-family: Constantia, Georgia;
+    color: #666;
 }
 .publisher-status .publisher-fontcount em{
     font-size: 22px;
@@ -168,7 +169,7 @@
          -o-animation:tagError 1s linear;
             animation:tagError 1s linear;
 }
-.tag-arrow{
+.publisher-textarea .tag-arrow{
     position: absolute;
     left: 25px;
     z-index: 0;
@@ -176,19 +177,19 @@
     overflow: hidden;
     height: 9px;
 }
-.tag-arrow .arrow{
+.publisher-textarea .tag-arrow .arrow{
     font-family: "SimSun";
     overflow: hidden;
     font-size: 15px;
     display: block;
     height: 15px;
 }
-.arrow-line{
+.publisher-textarea .arrow-line{
     color: #CCC;
 }
-.arrow-bg{
+.publisher-textarea .arrow-bg{
     color: #FFF;
-    margin: -13px 0 0;
+    margin-top: -13px;
 }
 .publisher-buttons{
     margin:10px 0 0;
@@ -196,7 +197,7 @@
     overflow: hidden;
     *zoom: 1;
 }
-.publisher-submit{
+.publisher-buttons .publisher-submit{
     float: right;
     padding: 5px 20px;
     color: #999;

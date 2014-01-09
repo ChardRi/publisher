@@ -2,6 +2,8 @@
 
 基于kissy1.4.1的发布器组件
 
+Demo: http://kissydemo.sinaapp.com/
+
 ## 快速使用
 
 ```javascript
