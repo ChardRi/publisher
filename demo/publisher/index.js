@@ -81,6 +81,9 @@ KISSY.add(function (S, Node, Base, XTemplate, UA, IO, Storage) {
             self.textareaWrap = self.node.one('.publisher-textarea');
             self.submitButton = self.node.one('.publisher-submit');
             self.fontCountNode = self.node.one('.font-count');
+
+            //hack IE11
+            if(UA.ie == 11) self.textareaNode.css('margin-top','6px');
         },
         bindUI : function(){
             var self = this;
