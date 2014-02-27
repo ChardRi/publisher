@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="res/normalize.css">
+    <link rel="stylesheet" type="text/css" href="res/index.css">
     <style>
         body{
             font-size: 13px;
@@ -29,20 +30,20 @@
     </div>
     <script type="text/javascript">
         KISSY.config({
-            combine:true,
             packages:{
                 publisher:{
-                    base:'./',
-                    debug:true,
-                    combine:false
+                    base:'../build',
+                    debug:false,
+                    combine:false,
+                    ignorePackageNameInUri:true
                 }
             }
         })
 
-        KISSY.use('publisher/index', function(S, Publisher){
+        KISSY.use('publisher/pages/index', function(S, Publisher){
             var publisher1 = new Publisher({
                 node : '#J_Test1',
-                url : '/publisher/test.js'
+                url : 'res/test.js'
             });
 
             var publisher2 = new Publisher({

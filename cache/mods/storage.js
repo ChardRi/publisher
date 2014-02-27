@@ -1,4 +1,4 @@
-KISSY.add('publisher/storage',function(S){
+;KISSY.add(function(S){
 	var storage;
 	if (typeof window.localStorage == 'undefined'){
 		var storage = {},
